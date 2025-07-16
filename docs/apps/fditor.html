@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fditor - Flutter AI Editor - Coin Galaxy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .app-icon-large {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        .app-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .features-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-detailed {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .feature-detailed .icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-detailed h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-detailed p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .code-example {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-family: 'Courier New', monospace;
+            color: #f8f8f2;
+            overflow-x: auto;
+        }
+
+        .code-example .comment {
+            color: #75715e;
+        }
+
+        .code-example .keyword {
+            color: #66d9ef;
+        }
+
+        .code-example .string {
+            color: #e6db74;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-placeholder {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+        }
+
+        .screenshot-placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .ai-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .ai-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .ai-feature .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .ai-feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .benefit .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .app-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Coin Galaxy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="stamp-kakeibo.html">Stamp家計簿</a></li>
+                <li><a href="fditor.html">Fditor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="app-hero">
+            <div class="container">
+                <a href="index.html" class="back-btn">← ホームに戻る</a>
+                <div class="app-icon-large">💻</div>
+                <h1>Fditor</h1>
+                <p>Flutter AI Editor - AI技術でFlutter開発を革新</p>
+                <div class="download-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.normidar.fditor" class="download-btn" target="_blank">
+                        <span>🤖</span>
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/id6746962617" class="download-btn" target="_blank">
+                        <span>📱</span>
+                        App Store
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>🖥️</span>
+                        Windows
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>🍎</span>
+                        macOS
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>🐧</span>
+                        Linux
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>AI支援機能</h2>
+                <div class="ai-features">
+                    <div class="ai-feature">
+                        <div class="icon">🔑</div>
+                        <h3>Claude API連携</h3>
+                        <p>Claudeのキーを入力すれば機能が使えるようになります。強力なAI技術をFlutter開発に活用できます。</p>
+                        <div class="code-example">
+<span class="comment">// Claude APIを使用したコード生成</span>
+<span class="keyword">void</span> generateUI() {
+  <span class="comment">// Claudeが要求に応じてUIコードを生成</span>
+  <span class="keyword">return</span> Container(
+    child: Text(<span class="string">'Generated by Claude'</span>),
+  );
+}
+                        </div>
+                    </div>
+                    <div class="ai-feature">
+                        <div class="icon">📱</div>
+                        <h3>アプリ内UI確認</h3>
+                        <p>生成されたUIをアプリ内で直接確認できます。コードの変更結果をリアルタイムで視覚的に確認しながら開発を進められます。</p>
+                        <div class="code-example">
+<span class="comment">// 生成されたUIのプレビュー</span>
+<span class="keyword">Widget</span> previewUI() {
+  <span class="comment">// アプリ内でUIを即座に確認</span>
+  <span class="keyword">return</span> MaterialApp(
+    home: GeneratedWidget(),
+  );
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2>主な機能</h2>
+                <div class="features-detailed">
+                    <div class="feature-detailed">
+                        <div class="icon">🎨</div>
+                        <h3>シンプルな画面</h3>
+                        <p>直感的で使いやすいシンプルなデザイン。複雑な操作は一切不要で、誰でも簡単にFlutter開発ができます。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">💰</div>
+                        <h3>完全無料</h3>
+                        <p>すべての機能が完全無料でご利用いただけます。追加課金や隠れた費用は一切ありません。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">🎨</div>
+                        <h3>テーマ選択</h3>
+                        <p>お好みに合わせてテーマを選択可能。自分らしいカスタマイズで快適な開発環境を構築できます。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">🌍</div>
+                        <h3>多言語対応</h3>
+                        <p>日本語、英語、中国語に対応。世界中の開発者が自分の言語で快適に使用できます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>開発効率の向上</h2>
+                <div class="benefits">
+                    <div class="benefit">
+                        <div class="icon">⏰</div>
+                        <h3>開発時間短縮</h3>
+                        <p>最大70%の開発時間短縮を実現</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="icon">🐛</div>
+                        <h3>バグ削減</h3>
+                        <p>AIによる事前チェックでバグを80%削減</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="icon">📈</div>
+                        <h3>品質向上</h3>
+                        <p>ベストプラクティスの自動適用</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="icon">🎓</div>
+                        <h3>学習支援</h3>
+                        <p>AIが開発パターンを教えて学習を促進</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2>スクリーンショット</h2>
+                <div class="screenshots">
+                    <div class="screenshot-placeholder">
+                        <div class="icon">💻</div>
+                        <h3>メインエディター</h3>
+                        <p>AI支援付きコードエディター</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">🤖</div>
+                        <h3>AI アシスタント</h3>
+                        <p>リアルタイムコード提案</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">📊</div>
+                        <h3>パフォーマンス分析</h3>
+                        <p>コード品質とパフォーマンス監視</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">🎨</div>
+                        <h3>UI デザイナー</h3>
+                        <p>ビジュアルUIデザインツール</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container" style="text-align: center;">
+                <h2>今すぐダウンロード</h2>
+                <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem;">
+                    Fditorで、AI支援によるFlutter開発の新しい体験を始めませんか？
+                </p>
+                <div class="download-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.normidar.fditor" class="download-btn" target="_blank">
+                        <span>🤖</span>
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/id6746962617" class="download-btn" target="_blank">
+                        <span>📱</span>
+                        App Store
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>🖥️</span>
+                        Windows
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>🍎</span>
+                        macOS
+                    </a>
+                    <a href="#" class="download-btn">
+                        <span>🐧</span>
+                        Linux
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="company-info">
+                <div class="company-name">normidar</div>
+                <p>日常生活を豊かにするアプリケーションの開発</p>
+            </div>
+            <p>&copy; 2024 normidar. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
