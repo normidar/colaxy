@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stamp家計簿 - Coin Galaxy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .app-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .app-icon-large {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        .app-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .features-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-detailed {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .feature-detailed .icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-detailed h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-detailed p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-placeholder {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+        }
+
+        .screenshot-placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step h3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .app-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Coin Galaxy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="stamp-kakeibo.html">Stamp家計簿</a></li>
+                <li><a href="fditor.html">Fditor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="app-hero">
+            <div class="container">
+                <a href="index.html" class="back-btn">← ホームに戻る</a>
+                <div class="app-icon-large">📊</div>
+                <h1>Stamp家計簿</h1>
+                <p>スタンプを押すような感覚で、楽しく簡単に家計管理</p>
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/app/id6740690214" class="download-btn" target="_blank">
+                        <span>📱</span>
+                        App Store
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.normidar.bookkeeping" class="download-btn" target="_blank">
+                        <span>🤖</span>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>主な機能</h2>
+                <div class="features-detailed">
+                    <div class="feature-detailed">
+                        <div class="icon">📝</div>
+                        <h3>初期Stamp作成</h3>
+                        <p>最初に記帳する時にウォレットの残高で初期Stampを作成。簡単な設定で家計簿を始められます。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">🎯</div>
+                        <h3>後日Stamp追加</h3>
+                        <p>記帳に怠けてしまった場合でも大丈夫。後日にその怠けたウォレットにStampを追加するだけで簡単に記録を更新できます。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">🎨</div>
+                        <h3>シンプルな画面</h3>
+                        <p>直感的で使いやすいシンプルなデザイン。複雑な操作は一切不要で、誰でも簡単に家計管理ができます。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">🌍</div>
+                        <h3>多言語対応</h3>
+                        <p>日本語、英語、中国語に対応。世界中のユーザーが自分の言語で快適に使用できます。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">🎨</div>
+                        <h3>テーマ選択</h3>
+                        <p>お好みに合わせてテーマを選択可能。自分らしいカスタマイズで楽しく家計管理を続けられます。</p>
+                    </div>
+                    <div class="feature-detailed">
+                        <div class="icon">💰</div>
+                        <h3>完全無料</h3>
+                        <p>すべての機能が完全無料でご利用いただけます。追加課金や隠れた費用は一切ありません。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2>使い方</h2>
+                <div class="how-it-works">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>アプリを起動</h3>
+                        <p>Stamp家計簿を開いて、今日の家計簿を始めましょう。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>スタンプを選択</h3>
+                        <p>食費、交通費、娯楽費など、カテゴリに応じたスタンプを選択します。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>金額を入力</h3>
+                        <p>支出した金額を入力して、スタンプを押すように記録完了。</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>分析を確認</h3>
+                        <p>月末に支出の傾向や予算の達成状況を確認して、次月の計画を立てます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>スクリーンショット</h2>
+                <div class="screenshots">
+                    <div class="screenshot-placeholder">
+                        <div class="icon">📱</div>
+                        <h3>メイン画面</h3>
+                        <p>直感的なスタンプ入力画面</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">📊</div>
+                        <h3>分析画面</h3>
+                        <p>視覚的な支出分析とグラフ</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">🎯</div>
+                        <h3>予算管理</h3>
+                        <p>月別予算設定と進捗確認</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">📅</div>
+                        <h3>履歴画面</h3>
+                        <p>過去の支出履歴と検索機能</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container" style="text-align: center;">
+                <h2>今すぐダウンロード</h2>
+                <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem;">
+                    Stamp家計簿で、楽しく簡単な家計管理を始めませんか？
+                </p>
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/app/id6740690214" class="download-btn" target="_blank">
+                        <span>📱</span>
+                        App Store
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.normidar.bookkeeping" class="download-btn" target="_blank">
+                        <span>🤖</span>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="company-info">
+                <div class="company-name">normidar</div>
+                <p>日常生活を豊かにするアプリケーションの開発</p>
+            </div>
+            <p>&copy; 2024 normidar. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
