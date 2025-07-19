@@ -11,46 +11,51 @@
         <nav class="container">
             <a href="#" class="logo">Coin Galaxy</a>
             <ul class="nav-links">
-                <li><a href="#home">ホーム</a></li>
-                <li><a href="#features">機能</a></li>
-                <li><a href="#apps">アプリ</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
+                <li><a href="#home" data-i18n="home">ホーム</a></li>
+                <li><a href="#features" data-i18n="features">機能</a></li>
+                <li><a href="#apps" data-i18n="apps">アプリ</a></li>
+                <li><a href="#contact" data-i18n="contact">お問い合わせ</a></li>
             </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="ja" onclick="changeLanguage('ja')">日本語</button>
+                <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">English</button>
+                <button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">中文</button>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h1>Coin Galaxy</h1>
-                <p>日常生活をより便利にする革新的なアプリケーション群</p>
-                <a href="#apps" class="cta-button">アプリを探索する</a>
+                <h1 data-i18n="heroTitle">Coin Galaxy</h1>
+                <p data-i18n="heroSubtitle">日常生活をより便利にする革新的なアプリケーション群</p>
+                <a href="#apps" class="cta-button" data-i18n="exploreApps">アプリを探索する</a>
             </div>
         </section>
 
         <section id="features" class="features">
             <div class="container">
-                <h2>なぜCoin Galaxyなのか？</h2>
+                <h2 data-i18n="whyCoinGalaxy">なぜCoin Galaxyなのか？</h2>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">💰</div>
-                        <h3>家計管理</h3>
-                        <p>直感的なスタンプ機能で、楽しく簡単に家計簿をつけることができます。</p>
+                        <h3 data-i18n="bookkeeping">家計管理</h3>
+                        <p data-i18n="bookkeepingDesc">直感的なスタンプ機能で、楽しく簡単に家計簿をつけることができます。</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🚀</div>
-                        <h3>AI支援開発</h3>
-                        <p>AIの力を活用して、Flutter開発をより効率的で快適にします。</p>
+                        <h3 data-i18n="aiDevelopment">AI支援開発</h3>
+                        <p data-i18n="aiDevelopmentDesc">AIの力を活用して、Flutter開発をより効率的で快適にします。</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🎨</div>
-                        <h3>美しいデザイン</h3>
-                        <p>使いやすさと美しさを両立した、モダンで洗練されたユーザーインターフェース。</p>
+                        <h3 data-i18n="beautifulDesign">美しいデザイン</h3>
+                        <p data-i18n="beautifulDesignDesc">使いやすさと美しさを両立した、モダンで洗練されたユーザーインターフェース。</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📱</div>
-                        <h3>モバイルファースト</h3>
-                        <p>スマートフォンでの使用を最優先に設計された、快適なモバイル体験。</p>
+                        <h3 data-i18n="mobileFirst">モバイルファースト</h3>
+                        <p data-i18n="mobileFirstDesc">スマートフォンでの使用を最優先に設計された、快適なモバイル体験。</p>
                     </div>
                 </div>
             </div>
@@ -58,20 +63,20 @@
 
         <section id="apps" class="apps-section">
             <div class="container">
-                <h2>私たちのアプリケーション</h2>
+                <h2 data-i18n="ourApps">私たちのアプリケーション</h2>
                 <div class="apps-grid">
                     <a href="apps/bookkeeping.html" class="app-card" style="text-decoration: none; color: inherit;">
                         <div class="app-icon">📊</div>
-                        <h3>Stamp家計簿</h3>
-                        <p>スタンプを押すような感覚で簡単に家計簿をつけることができるアプリ。視覚的で楽しい家計管理を実現します。</p>
+                        <h3 data-i18n="stampBookkeeping">Stamp家計簿</h3>
+                        <p data-i18n="stampBookkeepingDesc">スタンプを押すような感覚で簡単に家計簿をつけることができるアプリ。視覚的で楽しい家計管理を実現します。</p>
                     </a>
                     <a href="apps/fditor.html" class="app-card" style="text-decoration: none; color: inherit;">
                         <div class="app-icon">💻</div>
-                        <h3>Fditor - Flutter AI Editor</h3>
-                        <p>AI技術を活用したFlutter開発エディター。コード補完、エラー修正、最適化提案など、開発を強力にサポートします。</p>
+                        <h3 data-i18n="fditor">Fditor - Flutter AI Editor</h3>
+                        <p data-i18n="fditorDesc">AI技術を活用したFlutter開発エディター。コード補完、エラー修正、最適化提案など、開発を強力にサポートします。</p>
                     </a>
                 </div>
-                <a href="#contact" class="cta-button">今すぐ始める</a>
+                <a href="#contact" class="cta-button" data-i18n="startNow">今すぐ始める</a>
             </div>
         </section>
     </main>
@@ -80,11 +85,13 @@
         <div class="container">
             <div class="company-info">
                 <div class="company-name">normidar</div>
-                <p>日常生活を豊かにするアプリケーションの開発</p>
+                <p data-i18n="companyDesc">日常生活を豊かにするアプリケーションの開発</p>
             </div>
-            <p>&copy; 2024 normidar. All rights reserved.</p>
-            <p>Coin Galaxy - より便利で楽しい毎日を</p>
+            <p data-i18n="copyright">&copy; 2024 normidar. All rights reserved.</p>
+            <p data-i18n="tagline">Coin Galaxy - より便利で楽しい毎日を</p>
         </div>
     </footer>
+
+    <script src="js/localization.js"></script>
 </body>
 </html> 
