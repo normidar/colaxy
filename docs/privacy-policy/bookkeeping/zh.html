@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            padding: 2rem;
+        }
+        .markdown-body {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="markdown-body"></div>
+    <script>
+        const markdownContent = `# 隐私政策
+
+**MoneyMate**（以下简称“本应用”）重视用户隐私，并按照以下政策处理您的信息。
+
+### 1. 我们收集的信息   
+- 应用崩溃信息或错误日志（用于改进应用质量）  
+
+※ 我们不会收集任何可识别您个人身份的信息（例如姓名、地址、联系方式）。
+
+### 2. 使用目的  
+- 提供和改进记账功能  
+- 修复错误并提高应用稳定性  
+
+### 3. 数据存储与共享  
+- 所有数据仅存储在您的设备本地  
+- 不会与开发者或任何第三方共享数据
+
+### 4. 儿童隐私  
+本应用不面向13岁以下儿童使用。
+
+### 5. 政策变更  
+本隐私政策可能会不经通知进行修改。修改后的政策将通过应用或官方网站公布。
+
+### 6. 联系方式  
+如有任何疑问，请联系：  
+📧 normidar7@gmail.com
+`;
+        document.getElementById('content').innerHTML = marked.parse(markdownContent);
+    </script>
+</body>
+</html>
