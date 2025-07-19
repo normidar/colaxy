@@ -351,4 +351,29 @@ function updateContent() {
 // ページ読み込み時に実行
 document.addEventListener('DOMContentLoaded', function() {
     updateContent();
+
+    const header = document.querySelector('header');
+    const main = document.querySelector('main');
+    let lastScrollTop = 0;
+
+    function setMainPadding() {
+        if (main) {
+            main.style.paddingTop = `${header.offsetHeight}px`;
+        }
+    }
+
+    setMainPadding();
+    window.addEventListener('resize', setMainPadding);
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+            // Downscroll
+            header.style.top = `-${header.offsetHeight}px`;
+        } else {
+            // Upscroll
+            header.style.top = '0';
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
 }); 
