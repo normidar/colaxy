@@ -14,9 +14,6 @@ Thumbs.db
 *.swo
 *~
 
-# Cursor AI editor
-.cursor/
-
 # Logs
 logs
 *.log
