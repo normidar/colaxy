@@ -1,8 +1,8 @@
 # Privacy Policy
 
-_Last updated: January 3, 2025_
+_Last updated: January 22, 2025_
 
-Thank you for using **Polygon** ("the App"). We are committed to protecting your privacy. This Privacy Policy explains how your information is collected, used, and disclosed when you use the App.
+Thank you for using **Polygon wallet** ("the App"). We are committed to protecting your privacy. This Privacy Policy explains how your information is collected, used, and disclosed when you use the App.
 
 ## 1. Information We Collect
 
@@ -65,4 +65,4 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 
 **Email**: normidar7@gmail.com  
 **Developer**: Normidar  
-**App Name**: Polygon - Polygon Wallet Creator
+**App Name**: Polygon wallet - Polygon Wallet Creator
