@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-_Son güncelleme: 3 Ocak 2025_
+_Son güncelleme: 22 Ocak 2025_
 
 **Polygon wallet** ("Uygulama") kullandığınız için teşekkür ederiz. Gizliliğinizi korumaya kararlıyız. Bu Gizlilik Politikası, Uygulamayı kullandığınızda bilgilerinizin nasıl toplandığını, kullanıldığını ve açıklandığını açıklar.
 

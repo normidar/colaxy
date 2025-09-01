@@ -1,6 +1,6 @@
 # Política de Privacidad
 
-_Última actualización: 3 de enero de 2025_
+_Última actualización: 22 de enero de 2025_
 
 Gracias por usar **Polygon wallet** ("la Aplicación"). Estamos comprometidos a proteger su privacidad. Esta Política de Privacidad explica cómo se recopila, utiliza y divulga su información cuando usa la Aplicación.
 
