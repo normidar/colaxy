@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stamp家計簿 - Coin Galaxy</title>
+    <title>Polygon Wallet - Coin Galaxy</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../icon/favicon.svg" type="image/svg+xml">
     <style>
         .app-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
             color: white;
             padding: 6rem 0 4rem;
             text-align: center;
@@ -61,7 +61,7 @@
         }
 
         .section-alt {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(139, 92, 246, 0.05);
         }
 
         .section h2 {
@@ -84,6 +84,11 @@
             border-radius: 20px;
             text-align: center;
             color: white;
+            transition: transform 0.3s;
+        }
+
+        .feature-detailed:hover {
+            transform: translateY(-5px);
         }
 
         .feature-detailed .icon {
@@ -99,6 +104,31 @@
         .feature-detailed p {
             font-size: 1.1rem;
             line-height: 1.6;
+        }
+
+        .security-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .security-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .security-feature .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .security-feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .screenshots {
@@ -143,40 +173,23 @@
             background: rgba(255, 255, 255, 0.3);
         }
 
-        .how-it-works {
+        .benefits {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .step {
+        .benefit {
             background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
             color: white;
-            position: relative;
         }
 
-        .step-number {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(45deg, #ff6b6b, #ffa500);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .step h3 {
-            margin-top: 1rem;
+        .benefit .icon {
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
@@ -214,17 +227,17 @@
         <section class="app-hero">
             <div class="container">
                 <a href="../index.html" class="back-btn" data-i18n="backToHome">← ホームに戻る</a>
-                <div class="app-icon-large">📊</div>
-                <h1 data-i18n="stampBookkeeping">Stamp家計簿</h1>
-                <p data-i18n="stampBookkeepingSubtitle">スタンプを押すような感覚で、楽しく簡単に家計管理</p>
+                <div class="app-icon-large">💼</div>
+                <h1 data-i18n="polygon">Polygon Wallet</h1>
+                <p data-i18n="polygonSubtitle">自分だけが知る文書や言葉でウォレットを作成 - シンプルで安全なPolygonウォレット</p>
                 <div class="download-buttons">
-                    <a href="https://apps.apple.com/app/id6740690214" class="download-btn" target="_blank">
-                        <span>📱</span>
-                        App Store
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.normidar.bookkeeping" class="download-btn" target="_blank">
+                    <a href="https://play.google.com/store/apps/details?id=com.normidar.polygon" class="download-btn" target="_blank">
                         <span>🤖</span>
                         Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/id6751015869" class="download-btn" target="_blank">
+                        <span>📱</span>
+                        App Store
                     </a>
                 </div>
             </div>
@@ -236,33 +249,18 @@
                 <div class="features-detailed">
                     <div class="feature-detailed">
                         <div class="icon">📝</div>
-                        <h3 data-i18n="initialStamp">初期Stamp作成</h3>
-                        <p data-i18n="initialStampDesc">最初に記帳する時にウォレットの残高で初期Stampを作成。簡単な設定で家計簿を始められます。</p>
+                        <h3 data-i18n="voiceWalletCreation">自分だけが知る文書や言葉で作成</h3>
+                        <p data-i18n="voiceWalletCreationDesc">複雑な設定は不要。自分だけが知っている文書や言葉を使って簡単にウォレットを作成できます。初心者でも迷わずに始められます。</p>
                     </div>
                     <div class="feature-detailed">
-                        <div class="icon">🎯</div>
-                        <h3 data-i18n="laterStamp">後日Stamp追加</h3>
-                        <p data-i18n="laterStampDesc">記帳に怠けてしまった場合でも大丈夫。後日にその怠けたウォレットにStampを追加するだけで簡単に記録を更新できます。</p>
+                        <div class="icon">⛓️</div>
+                        <h3 data-i18n="polygonOnly">Polygon専用ウォレット</h3>
+                        <p data-i18n="polygonOnlyDesc">Polygonネットワーク専用に最適化されたウォレット。高速で低コストな取引を実現します。</p>
                     </div>
                     <div class="feature-detailed">
-                        <div class="icon">🎨</div>
-                        <h3 data-i18n="simpleUI">シンプルな画面</h3>
-                        <p data-i18n="simpleUIDesc">直感的で使いやすいシンプルなデザイン。複雑な操作は一切不要で、誰でも簡単に家計管理ができます。</p>
-                    </div>
-                    <div class="feature-detailed">
-                        <div class="icon">🌍</div>
-                        <h3 data-i18n="multilingual">多言語対応</h3>
-                        <p data-i18n="multilingualDesc">日本語、英語、中国語に対応。世界中のユーザーが自分の言語で快適に使用できます。</p>
-                    </div>
-                    <div class="feature-detailed">
-                        <div class="icon">🎨</div>
-                        <h3 data-i18n="themeSelection">テーマ選択</h3>
-                        <p data-i18n="themeSelectionDesc">お好みに合わせてテーマを選択可能。自分らしいカスタマイズで楽しく家計管理を続けられます。</p>
-                    </div>
-                    <div class="feature-detailed">
-                        <div class="icon">💰</div>
-                        <h3 data-i18n="completelyFree">完全無料</h3>
-                        <p data-i18n="completelyFreeDesc">すべての機能が完全無料でご利用いただけます。追加課金や隠れた費用は一切ありません。</p>
+                        <div class="icon">🔐</div>
+                        <h3 data-i18n="easySecureLogin">簡単で安全なログイン</h3>
+                        <p data-i18n="easySecureLoginDesc">自分のウォレットに簡単にログインでき、高いセキュリティレベルで資産を保護します。</p>
                     </div>
                 </div>
             </div>
@@ -270,27 +268,22 @@
 
         <section class="section section-alt">
             <div class="container">
-                <h2 data-i18n="howToUse">使い方</h2>
-                <div class="how-it-works">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3 data-i18n="step1Title">アプリを起動</h3>
-                        <p data-i18n="step1Desc">Stamp家計簿を開いて、今日の家計簿を始めましょう。</p>
+                <h2 data-i18n="securityFeatures">セキュリティ機能</h2>
+                <div class="security-features">
+                    <div class="security-feature">
+                        <div class="icon">🔒</div>
+                        <h3 data-i18n="localStorage">ローカル保存</h3>
+                        <p data-i18n="localStorageDesc">すべてのウォレット情報はデバイスにローカル保存され、外部サーバーに送信されることはありません。</p>
                     </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3 data-i18n="step2Title">スタンプを選択</h3>
-                        <p data-i18n="step2Desc">食費、交通費、娯楽費など、カテゴリに応じたスタンプを選択します。</p>
+                    <div class="security-feature">
+                        <div class="icon">🛡️</div>
+                        <h3 data-i18n="encryption">暗号化保護</h3>
+                        <p data-i18n="encryptionDesc">業界標準の暗号化技術により、プライベートキーや機密情報を安全に保護します。</p>
                     </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3 data-i18n="step3Title">金額を入力</h3>
-                        <p data-i18n="step3Desc">支出した金額を入力して、スタンプを押すように記録完了。</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <h3 data-i18n="step4Title">分析を確認</h3>
-                        <p data-i18n="step4Desc">月末に支出の傾向や予算の達成状況を確認して、次月の計画を立てます。</p>
+                    <div class="security-feature">
+                        <div class="icon">🔑</div>
+                        <h3 data-i18n="privateKeyControl">プライベートキー管理</h3>
+                        <p data-i18n="privateKeyControlDesc">プライベートキーは常にユーザーのデバイス内に保持され、外部に送信されることはありません。</p>
                     </div>
                 </div>
             </div>
@@ -298,46 +291,74 @@
 
         <section class="section">
             <div class="container">
-                <h2 data-i18n="screenshots">スクリーンショット</h2>
-                <div class="screenshots">
-                    <div class="screenshot-placeholder">
-                        <div class="icon">📱</div>
-                        <h3 data-i18n="mainScreen">メイン画面</h3>
-                        <p data-i18n="mainScreenDesc">直感的なスタンプ入力画面</p>
+                <h2 data-i18n="whyPolygonWallet">なぜPolygon Walletなのか？</h2>
+                <div class="benefits">
+                    <div class="benefit">
+                        <div class="icon">⚡</div>
+                        <h3 data-i18n="fastTransactions">高速取引</h3>
+                        <p data-i18n="fastTransactionsDesc">Polygonネットワークの高速性を活かした迅速な取引処理</p>
                     </div>
-                    <div class="screenshot-placeholder">
-                        <div class="icon">📊</div>
-                        <h3 data-i18n="analysisScreen">分析画面</h3>
-                        <p data-i18n="analysisScreenDesc">視覚的な支出分析とグラフ</p>
+                    <div class="benefit">
+                        <div class="icon">💰</div>
+                        <h3 data-i18n="lowFees">低コスト</h3>
+                        <p data-i18n="lowFeesDesc">取引手数料が非常に低く、コスト効率の良い運用が可能</p>
                     </div>
-                    <div class="screenshot-placeholder">
+                    <div class="benefit">
+                        <div class="icon">🌐</div>
+                        <h3 data-i18n="polygonEcosystem">Polygonエコシステム</h3>
+                        <p data-i18n="polygonEcosystemDesc">Polygonネットワーク上の豊富なDAppsやサービスにアクセス</p>
+                    </div>
+                    <div class="benefit">
                         <div class="icon">🎯</div>
-                        <h3 data-i18n="budgetScreen">予算管理</h3>
-                        <p data-i18n="budgetScreenDesc">月別予算設定と進捗確認</p>
-                    </div>
-                    <div class="screenshot-placeholder">
-                        <div class="icon">📅</div>
-                        <h3 data-i18n="historyScreen">履歴画面</h3>
-                        <p data-i18n="historyScreenDesc">過去の支出履歴と検索機能</p>
+                        <h3 data-i18n="userFriendly">ユーザーフレンドリー</h3>
+                        <p data-i18n="userFriendlyDesc">シンプルで直感的なインターフェースで、誰でも簡単に使用可能</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section section-alt">
+            <div class="container">
+                <h2 data-i18n="screenshots">スクリーンショット</h2>
+                <div class="screenshots">
+                    <div class="screenshot-placeholder">
+                        <div class="icon">💼</div>
+                        <h3 data-i18n="walletCreation">ウォレット作成</h3>
+                        <p data-i18n="walletCreationDesc">自分だけが知る文書や言葉で簡単にウォレットを作成</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">🔐</div>
+                        <h3 data-i18n="secureLogin">セキュアログイン</h3>
+                        <p data-i18n="secureLoginDesc">安全で簡単なログイン画面</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">📊</div>
+                        <h3 data-i18n="walletDashboard">ウォレットダッシュボード</h3>
+                        <p data-i18n="walletDashboardDesc">残高と取引履歴の確認</p>
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <div class="icon">💸</div>
+                        <h3 data-i18n="transactionHistory">取引履歴</h3>
+                        <p data-i18n="transactionHistoryDesc">詳細な取引履歴の表示</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
             <div class="container" style="text-align: center;">
                 <h2 data-i18n="downloadNow">今すぐダウンロード</h2>
-                <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem;" data-i18n="downloadMessage">
-                    Stamp家計簿で、楽しく簡単な家計管理を始めませんか？
+                <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem;" data-i18n="polygonDownloadMessage">
+                    Polygon Walletで、シンプルで安全なウォレット管理を始めませんか？
                 </p>
                 <div class="download-buttons">
-                    <a href="https://apps.apple.com/app/id6740690214" class="download-btn" target="_blank">
-                        <span>📱</span>
-                        App Store
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.normidar.bookkeeping" class="download-btn" target="_blank">
+                    <a href="https://play.google.com/store/apps/details?id=com.normidar.polygon" class="download-btn" target="_blank">
                         <span>🤖</span>
                         Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/id6751015869" class="download-btn" target="_blank">
+                        <span>📱</span>
+                        App Store
                     </a>
                 </div>
             </div>
@@ -356,4 +377,5 @@
 
     <script src="../js/localization.js"></script>
 </body>
-</html> 
+</html>
+
