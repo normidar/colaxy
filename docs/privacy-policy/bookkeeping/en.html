@@ -19,7 +19,7 @@
 <body>
     <div id="content" class="markdown-body"></div>
     <script>
-        fetch('../../../apps/privacy_policy/bookkeeping/en.md')
+        fetch('../md/bookkeeping/en.md')
             .then(response => response.text())
             .then(text => {
                 document.getElementById('content').innerHTML = marked.parse(text);
